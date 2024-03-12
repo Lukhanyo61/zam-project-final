@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style3.css">
+  
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+  <link rel="stylesheet" href="/style3.css">
+</head>
+
+<body style="background-color: rgb(216, 237, 237);">
+  <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <div style="background-color: #0f0844; width: 75px; height: 75px; border-radius: 9px;">
+        <a class="navbar-brand  mt-2 mt-lg-0" href="#">
+          <img width="70px" height="70px" sty class="nav-logo" src="./WhatsApp_Image_2024-01-08_at_12.01.21_PM-removebg-preview.png" height="75" alt="MDB Logo" loading="lazy"  style=" position: relative; left: 3px; top: 3px;  border-radius: 9px; "/>
+        </a>
+      </div>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <!-- Left links -->
+      <div style="background-color: #0f0844; width: 1470px; height: 80px; border-radius: 9px;">
+      <ul style="margin-left: 35%; margin-top: 20px;"  id="lin" class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a style="color:  rgb(227, 23, 84);" class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a style="color:  rgb(227, 23, 84);" class="nav-link" href="./about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a style="color:  rgb(227, 23, 84);" class="nav-link" href="./gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a style="color:  rgb(227, 23, 84);" class="nav-link" href="./resources.html">Resources</a>
+        </li>
+        <li class="nav-item">
+         <a style="color:  rgb(227, 23, 84);" class="nav-link" href="./contact.html">Contact</a>
+       </li>
+       
+      </ul>
+      
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+
+      
+      <!-- Avatar -->
+      <a href="/login">
+       <button style="width: 20px; margin-left: -40px;"><span style="color: transparent;">Zam</span></button>
+      </a>
+    
+
+       
+       
+      
+    </div>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+<div id="banner" style="border-radius: 15px; width: 350px; height: 70px;" class="container-fluid">
+  <h1 style="color: #fff; position: relative; bottom: -15px;" class="text-center">ABOUT US</h1>
+</div>
+
+<div>
+  <img id="piz"
+  src="data:image/jpeg;base64,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"
+ class="img-fluid" alt="..."/>
+</div>
+<div class="card" style="max-width: 900px; position: relative; top: -300px; right: -350px;">
+  <div class="card-body">
+    <h5 class="card-title">About Zimkhitha Amanada Mashalaba</h5>
+    <p class="card-text">
+      The Zimkhitha Amanda Mashalaba Foundation herein referred to as ZAM Foundation, is a registered NPO (153-560 NPO) that aims to provide access to learners and driver training courses to young people from previously disadvantaged communities in order to improve their employability profile. The foundation focuses on young people who are 25 years and younger, who either have matric or are in the process of obtaining one. We have identified that a large number of these young people once they finish their matric, usually opt for job seeking as opposed to tertiary education due to lack of funds from their families. Our aim is to intervene during this period by providing them with the opportunity to acquire a skill that improves their chances of employment and can also be of great use to them in the future i.e. the ability and certification to drive a motor vehicle.
+    </p>
+  </div>
+  <div id="zam-gov" class="card-body">
+    <h5 class="card-title">Goverance</h5>
+    <p class="card-text">
+      The foundation is governed by an advisory board that is made up of members who serve on a voluntary basis. None of the members draw a salary or remuneration from the organisation.
+    </p>
+   
+  </div>
+</div>
+<div class="card" style="max-width: 200px; position: relative; top: -425px; right: -62px;">
+  <div class="card-body">
+    
+    <p class="card-text">In memory of our beloved<br/>sister and daughter<br/> Zimkhitha Amanda Mashalaba</p>
+    
+  </div>
+</div>
+
+<div id="banner" style=" border-radius: 15px; margin-top: -350px; width: 350px; height: 70px;" class="container-fluid">
+  <h1 style="position: relative; top: 15px; color: #fff" id="meet" class="text-center">THE TEAM</h1>
+</div>
+
+<div style="margin-top: 90px;" class="container tainer">
+  <div class="row ">
+
+    <div id="cardA"  class="col-lg-3 col-md-6">
+      <div class="card  ">
+        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+          <img src="https://zamfoundation.co.za/wp-content/uploads/2021/04/image-removebg-preview-2.jpg" class="img-fluid" />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+          </a>
+        </div>
+       
+        <div id="carda" class="card-body" style="height: 600px;">
+          <h5 class="card-title">Gringoe Thandile Mashalaba</h5>
+          <p class="card-text">
+            Gringoe works in the design engineering space and is very passionate about mechanical design and engineering in general. He is an ordained pastor who currently serves in the national structures at his church.
+            Driven by his passion for helping others Gringoe founded the ZAM Foundation in 2015 as a vehicle to assist young people from around his own childhood neighbourhood and surrounding areas. He currently serves as Chairman of the board of ZAM.
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div id="cardB"class="col-lg-3 col-md-6 crd2">
+      <div  class="card  ">
+        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+          <img src="https://zamfoundation.co.za/wp-content/uploads/2021/04/image-removebg-preview-1-1.jpg" class="img-fluid" />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+          </a>
+        </div>
+        
+        <div id="cardb" class="card-body" style="height: 600px;">
+          <h5 class="card-title">Mawonga Phaphile Celesi</h5>
+          <p class="card-text">
+            Phaphile trained as an educator and later worked on radio both as presenter and HOD. He currently works as Head of Missions and Theological Training. Phaphile also authored a children’s book, called ‘With the eyes of a child-sharing God’s love with the young’.
+
+            It was his passionate for mentorship that saw him join ZAM Foundation as a board member in 2015.
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div id="cardC" class="col-lg-3 col-md-6 crd3">
+      <div  class="card  ">
+        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+          <img src="https://zamfoundation.co.za/wp-content/uploads/2021/04/image-removebg-preview-2-1.jpg" class="img-fluid" />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+          </a>
+        </div>
+        
+        <div id="cardc" class="card-body" style="height: 600px;">
+          <h5 class="card-title">Mcedidi Mkubukeli</h5>
+          <p class="card-text">
+            Mncedisi is a former manager within the Department of Health and is now retired.
+            He is also a founder of Family Enrichment Ministry (FEM) that focuses on helping families and married couples ovwrcome life’s challenges. He currently also serves as a marriage counselor.
+
+            As a family oriented individual it was a no brainer when Mncedisi was invited to be part of the ZAM Foindation board and accepted the challenge enthusiastically.
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div id="cardD" class="col-lg-3 col-md-6 crd4">
+      <div class="card  ">
+        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+          <img src="https://zamfoundation.co.za/wp-content/uploads/2021/04/image-removebg-preview-3.jpg" class="img-fluid" />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+          </a>
+        </div>
+       
+        <div id="cardd" class="card-body" style="height: 600px;">
+          <h5 class="card-title">Siegfried Ngubane</h5>
+          <p class="card-text">
+            Siegfried serves as ‘Regional Director’ of a mission organisation in Southern Africa and Indian Oceans Islands. His focus is on the entity directors in the respective countries. He is an ordained minister and passionate about theological education and leadership development. Siegfried serves in various boards and councils in and beyond South Africa.
+            Recently he has also been appointed as a ‘Research Fellow’ in Missiology with the University of Stellenbosch.
+
+            Siegfried has served on the board of ZAM from the beginning. As a trained, life and leadership coach, he finds serving in the board a unique and joyful experience.
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="row ">
+
+      <div id="cardE" class="col-lg-3 col-md-6 crd5">
+        <div  class="card  ">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img id="Nomf" src="https://zamfoundation.co.za/wp-content/uploads/2021/04/image-removebg-preview-4-1.jpg" class="img-fluid"
+            />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+            </a>
+          </div>
+         
+          <div id="carde" class="card-body" style="height: 500px;">
+            <h5 class="card-title">Nomfundo Sibara</h5>
+            <p class="card-text">
+              Nomfundo is an IT Professional working in the Financial Services sector. She has a passion for people and technology and believes that through building solid relationships and nurturing partnerships we can achieve many great things in business and life.
+
+              It has always been her nature to help find solutions to problems, that’s what led her to ZAM Foundation. She currently serves as secretary of the board.
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div id="cardF" class="col-lg-3 col-md-6 crd6">
+        <div class="card  ">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img id="phum" src="https://zamfoundation.co.za/wp-content/uploads/2021/04/zDDdoYqQ64U.jpg" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+            </a>
+          </div>
+          
+          <div  class="card-body" id="cardf"  style="height: 500px;">
+            <h5 class="card-title">Unkown</h5>
+            <p class="card-text">
+              Jarome is a qualified attorney with years of experience in the legal field couples with hands on experience in management of business entities. 
+              As a football enthusiast, Jarome now works as a full-time football coach at one of the leading institutions in Germany.
+
+              His experience serving as chairman for various Non-Governmental Organisation made him the perfect choice to serve on the board of ZAM Foundation. Jarome believe in empowerment, development and mentorship especially those who were previously disadvantaged.
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div id="cardG" class="col-lg-3 col-md-6 crd7">
+        <div  class="card  ">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img id="phum" src="https://zamfoundation.co.za/wp-content/uploads/2021/04/zDDdoYqQ64U.jpg" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+            </a>
+          </div>
+         
+          <div id="cardg" class="card-body" style="height: 500px;">
+            <h5 class="card-title">Phumezo Masango</h5>
+            <p class="card-text">
+              Phumezo is a Church Minister serving in the township of Khayelitsha. He is passionate about the leadership developmentand training for young people. Phumezo also works as a lecturer at George Whitefiled College in Cape Town.
+              Phumezo has served in the advisory board of ZAM Foundation from its inception.
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div id="cardH" class="col-lg-3 col-md-6  crd8">
+        <div  class="card   ">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img id="xol" src="https://zamfoundation.co.za/wp-content/uploads/2021/04/ABUWC-0a7_A.jpg" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+            </a>
+          </div>
+          
+          <div id="cardh" class="card-body" style="height: 500px;">
+            <h5 class="card-title">Xolani Gobelo</h5>
+            <p class="card-text">
+              Xolani is a qualified educator and now serves within the Higher Education with specific focus in the students financial aid sector.
+              His passion for education, training and development for the previously disadvantaged was one of the reasons that led him to join ZAM Foundation as a board member in 2015.
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div style="margin-top: 100px; border: #fff solid 2px;" class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-4 col-xs-12">
+        <div class="single_footer">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#pay">Paying it forward</a></li>
+            <li><a href="#">Simply dummy text</a></li>
+            <li><a href="#">The printing and typesetting </a></li>
+            <li><a href="#">Standard dummy text</a></li>
+            <li><a href="#">Type specimen book</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="single_footer single_footer_address">
+          <h4>Page Link</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/gallery.html">Beneficiaries</a></li>
+            <li><a href="/contact.html">Contacts</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="single_footer single_footer_address">
+          <h4>Subscribe today</h4>
+          <div class="signup_form">
+            <form action="#" class="subscribe">
+              <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+              <button type="button" class="subscribe__btn"><i class="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#0F0844" d="m20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42l10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001l-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15l4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z" />
+                  </svg></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="social_profile">
+          <ul>
+            <li><a href="https://www.facebook.com/ZAMFoundationSA/" target="_blank"><i class="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="white" d="M13 10h3v3h-3v7h-3v-7H7v-3h3V8.745c0-1.189.374-2.691 1.118-3.512C11.862 4.41 12.791 4 13.904 4H16v3h-2.1c-.498 0-.9.402-.9.899V10z" />
+                  </svg></i></a></li>
+            <li><a href="https://twitter.com/ZAMFoundationSA" target="_blank"><i class="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="white" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" />
+                  </svg></i></a></li>
+            <li><a href="#"><i class="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
+                    <path fill="white" d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32Zm48-136H80a56.06 56.06 0 0 0-56 56v96a56.06 56.06 0 0 0 56 56h96a56.06 56.06 0 0 0 56-56V80a56.06 56.06 0 0 0-56-56Zm40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z" />
+                  </svg></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 col-xs-12">
+        <p class="copyright">Copyright © 2015 <a href="#">Codetelligent</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>

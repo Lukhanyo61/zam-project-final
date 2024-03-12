@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  
+  <link rel="stylesheet" href="style.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  
+  <!------ Include the above in your HEAD tag ---------->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+<link rel="stylesheet" href="style2.css">
+<style>
+ 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.slider {
+  width: 90vmin;
+  height: 90vmin;
+  -webkit-perspective: 100vmin;
+          perspective: 100vmin;
+  margin: auto;
+  -webkit-perspective-origin: top center;
+          perspective-origin: top center;
+  position: relative; left: -17px;
+  box-sizing: border-box;
+}
+.slider__item {
+  position: absolute;
+  bottom: 200;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  padding-top: 15vmin;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-transform 0.18s ease;
+  transition: -webkit-transform 0.18s ease;
+  transition: transform 0.18s ease;
+  transition: transform 0.18s ease, -webkit-transform 0.18s ease;
+}
+.slider__item:nth-child(1) {
+  -webkit-transform: translate3d(0, 0, 0vmin);
+          transform: translate3d(0, 0, 0vmin);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  z-index: 7;
+}
+.slider__item:nth-child(2) {
+  -webkit-transform: translate3d(0, 0, -15vmin);
+          transform: translate3d(0, 0, -15vmin);
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+  z-index: 6;
+}
+.slider__item:nth-child(3) {
+  -webkit-transform: translate3d(0, 0, -30vmin);
+          transform: translate3d(0, 0, -30vmin);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  z-index: 5;
+}
+.slider__item:nth-child(4) {
+  -webkit-transform: translate3d(0, 0, -45vmin);
+          transform: translate3d(0, 0, -45vmin);
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+  z-index: 4;
+}
+.slider__item:nth-child(5) {
+  -webkit-transform: translate3d(0, 0, -60vmin);
+          transform: translate3d(0, 0, -60vmin);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  z-index: 3;
+}
+.slider__item:nth-child(6) {
+  -webkit-transform: translate3d(0, 0, -75vmin);
+          transform: translate3d(0, 0, -75vmin);
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+  z-index: 2;
+}
+.slider__item:nth-child(7) {
+  -webkit-transform: translate3d(0, 0, -90vmin);
+          transform: translate3d(0, 0, -90vmin);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  z-index: 1;
+}
+.slider__item:nth-child(8) {
+  -webkit-transform: translate3d(0, 0, -105vmin);
+          transform: translate3d(0, 0, -105vmin);
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+  z-index: 0;
+}
+.slider__image {
+  width: 100%;
+  height: 80%;
+  background-color: #999;
+  border: 1.5vmin solid #eee;
+  box-sizing: border-box;
+  box-shadow: 0px 3vmin 3vmin rgba(0, 0, 0, 0.75), 0 -1.5vmin 2.7vmin rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  display: block;
+  -webkit-transition: opacity 0.2s ease, -webkit-transform 0.18s ease;
+  transition: opacity 0.2s ease, -webkit-transform 0.18s ease;
+  transition: transform 0.18s ease, opacity 0.2s ease;
+  transition: transform 0.18s ease, opacity 0.2s ease, -webkit-transform 0.18s ease;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+.slider__caption {
+  height: 20%;
+  font-weight: bold;
+  color: rgb(227, 23, 84);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.slider__btn {
+ position: relative; top: -200px;
+  width: 40px;
+  height:40px;
+  margin: 2vmin auto;
+ 
+  border-right: 2vmin solid rgb(227, 23, 84);
+  border-bottom: 2vmin solid rgb(227, 23, 84);
+  z-index: 100;
+  cursor: pointer;
+  -webkit-transform: perspective(10vmin) rotateX(-30deg) rotateZ(45deg);
+          transform: perspective(10vmin) rotateX(-30deg) rotateZ(45deg);
+}
+.slider__btn:active {
+  border-right-color: #0f0844;
+  border-bottom-color: #0f0844;
+}
+
+</style>
+</head>
+
+<body style="background-color: (216, 237, 237);
+height: fit-content;">
+       
+      
+      
+   
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-default bg-default">
+   <!-- Container wrapper -->
+   <div class="container-fluid">
+     <!-- Toggle button -->
+     <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <i class="fas fa-bars"></i>
+     </button>
+
+     <!-- Collapsible wrapper -->
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <!-- Navbar brand -->
+       <div style="background-color: #0f0844; width: 75px; height: 75px; border-radius: 9px;">
+         <a class="navbar-brand  mt-2 mt-lg-0" href="#">
+           <img width="70px" height="70px" sty class="nav-logo" src="./WhatsApp_Image_2024-01-08_at_12.01.21_PM-removebg-preview.png" height="75" alt="MDB Logo" loading="lazy"  style=" position: relative; left: 1px; top: 3px;  border-radius: 9px; "/>
+         </a>
+       </div>
+       &nbsp;
+       &nbsp;
+       &nbsp;
+       <!-- Left links -->
+      <div style="background-color: #0f0844; width: 1460px; height: 80px; border-radius: 9px;">
+       <ul style="margin-left: 35%; margin-top: 20px;"  id="lin" class="navbar-nav me-auto mb-2 mb-lg-0">
+         <li class="nav-item">
+           <a style="color:  rgb(227, 23, 84);" class="nav-link" href="/">Home</a>
+         </li>
+         <li class="nav-item">
+           <a style="color:  rgb(227, 23, 84);" class="nav-link" href="./about.html">About</a>
+         </li>
+         <li class="nav-item">
+           <a style="color:  rgb(227, 23, 84);" class="nav-link" href="./gallery.html">Gallery</a>
+         </li>
+         <li class="nav-item">
+           <a style="color:  rgb(227, 23, 84);" class="nav-link" href="./resources.html">Resources</a>
+         </li>
+         <li class="nav-item">
+          <a style="color:  rgb(227, 23, 84);" class="nav-link" href="./contact.html">Contact</a>
+        </li>
+        
+       </ul>
+       
+       <!-- Left links -->
+     </div>
+     <!-- Collapsible wrapper -->
+
+     <!-- Right elements -->
+     <div class="d-flex align-items-center">
+       <!-- Icon -->
+
+       
+       <!-- Avatar -->
+       <a href="/dashboard-login.html">
+        <button style=" margin-left: -40px;"><span style="background-color: transparent;"></span></button>
+       </a>
+     
+
+        
+        
+       
+     </div>
+     </div>
+     <!-- Right elements -->
+   </div>
+   <!-- Container wrapper -->
+ </nav>
+ <!-- Navbar -->
+
+
+
+
+  <div   id="banner" style="background-color: rgb(227, 23, 84); position: relative; top: 50px; width: 500px; border-radius: 9px; height: 150px;" class="container-fluid">
+    <h1 style="position: relative; top: 50px; color: #fff;" class="text-center">Gallery</h1>
+    <p style="position: relative; top: 50px; color: #fff;" class="text-center">Here is our insight</p>
+  </div>
+
+  <div type="button" class="btn" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#exampleModal"  id="banner" style="background-color: rgb(227, 23, 84); position: relative; top: 140px; left: 183px; width: 500px; border-radius: 9px; height: 150px;" class="container-fluid">
+   <h1  style="position: relative; top: -30px; color: #fff;" class="text-center">Our People</h1>
+  
+ </div>
+ <div style="margin-top: 300px;">
+ <span style='font-size:200px; color: #000; position: relative; top: -414px; left: 660px; '>&#8594;</span>
+ <div type="button" class="btn" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#exampleModal" id="banner" style="background-color: rgb(227, 23, 84); position: relative; top: -480px;left: 640px; width: 500px; border-radius: 9px; height: 150px;" class="container-fluid">
+   <h1 style="position: relative; top: -30px; color: #fff;" class="text-center">Inductions</h1>
+  
+ </div>
+ <div type="button" class="btn" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#exampleModal" id="banner" style="background-color: rgb(227, 23, 84); position: relative; top: -190px; left: 136px; width: 500px; border-radius: 9px; height: 150px;" class="container-fluid">
+   <h1 style="position: relative; top: -30px; color: #fff;" class="text-center">learners Licence Phase</h1>
+   <span style='font-size:200px; color: #000; position: relative; top: -380px;'>&#8595;</span>
+ </div>
+ <span style='font-size:200px; color: #000; position: relative; top: 16px; left: -160px; '>&#8595;</span>
+ <div type="button" class="btn" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#exampleModal" id="banner" style="background-color: rgb(227, 23, 84); position: relative; left: 817px; top: -54px; width: 500px; border-radius: 9px; height: 150px;" class="container-fluid">
+   <h1 style="position: relative; top: -30px; color: #fff;" class="text-center">Drivers Phase</h1>
+  
+ </div>
+ <div style="width: 13px;
+ height: 700px; background-color: black; position: relative; ;left: 750px; top: -700px;"></div>
+ <div type="button" class="btn" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#exampleModal" id="banner" style=" position: relative; top: -760px; left: 500px; width: 500px; border-radius: 9px; height: 150px;" class="container-fluid">
+   <h1 style="position: relative; top: -30px; color: #fff;" class="text-center">General Events</h1>
+  
+ </div>
+ <span style="font-size:200px; position: relative; top: -840px; left: 204.5px; color: #000;"  >&#8595;</span>
+  </div>
+
+
+
+
+
+ <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="slider">
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 533</figcaption>
+          </figure>
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 623</figcaption>
+          </figure>
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 419</figcaption>
+          </figure>
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 490</figcaption>
+          </figure>
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 695</figcaption>
+          </figure>
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 458</figcaption>
+          </figure>
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 702</figcaption>
+          </figure>
+        </div>
+        <div class="slider__btn"></div>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+    
+ 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="slider">
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 533</figcaption>
+          </figure>
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 623</figcaption>
+          </figure>
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 419</figcaption>
+          </figure>
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 490</figcaption>
+          </figure>
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 695</figcaption>
+          </figure>
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 458</figcaption>
+          </figure>
+          <figure class="slider__item"><img class="slider__image" src="https://unsplash.it/600/360?image=#{itemsImg}"/>
+            <figcaption class="slider__caption">Image - 702</figcaption>
+          </figure>
+        </div>
+        <div   class="slider__btn"></div>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+ 
+ <div  class="footer">
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-4 col-sm-4 col-xs-12">
+         <div class="single_footer">
+           <h4>Company</h4>
+           <ul>
+             <li><a href="#pay">Paying it forward</a></li>
+             <li><a href="#">Simply dummy text</a></li>
+             <li><a href="#">The printing and typesetting </a></li>
+             <li><a href="#">Standard dummy text</a></li>
+             <li><a href="#">Type specimen book</a></li>
+           </ul>
+         </div>
+       </div>
+       <div class="col-md-4 col-sm-4 col-xs-12">
+         <div class="single_footer single_footer_address">
+           <h4>Page Link</h4>
+           <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/gallery.html">Beneficiaries</a></li>
+            <li><a href="/contact.html">Contacts</a></li>
+
+          </ul>
+         </div>
+       </div>
+       <div class="col-md-4 col-sm-4 col-xs-12">
+         <div class="single_footer single_footer_address">
+           <h4>Donate Now</h4>
+           <div class="signup_form">
+   
+             <form action="/subscribe" method="post" class="subscribe">
+               <input type="email"  name="email" class="subscribe__input" placeholder="Enter Email Address" />
+               <button type="submit" class="subscribe__btn"><i class="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                     <path fill="#0F0844" d="m20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42l10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001l-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15l4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z" />
+                   </svg></i></button>
+             </form>
+   
+           </div>
+         </div>
+         <div class="social_profile">
+           <ul>
+             <li><a href="#"><i class="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                     <path fill="white" d="M13 10h3v3h-3v7h-3v-7H7v-3h3V8.745c0-1.189.374-2.691 1.118-3.512C11.862 4.41 12.791 4 13.904 4H16v3h-2.1c-.498 0-.9.402-.9.899V10z" />
+                   </svg></i></a></li>
+             <li><a href="#"><i class="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                     <path fill="white" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" />
+                   </svg></i></a></li>
+             <li><a href="#"><i class="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
+                     <path fill="white" d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32Zm48-136H80a56.06 56.06 0 0 0-56 56v96a56.06 56.06 0 0 0 56 56h96a56.06 56.06 0 0 0 56-56V80a56.06 56.06 0 0 0-56-56Zm40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z" />
+                   </svg></i></a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-lg-12 col-sm-12 col-xs-12">
+         <p class="copyright">Copyright © 2015 <a href="#">Codetelligent</a>.</p>
+       </div>
+     </div>
+   </div>
+   </div>
+
+    
+<script>
+ 
+
+        $(function(){
+	var	btn = $(".slider__btn");
+	
+	btn.on("click",function(){
+		$(".slider__item").first().clone().appendTo(".slider");
+		$(".slider__image").first().css({transform: "rotateX(-180deg)", opacity: 0});
+		setTimeout(function(){
+			$(".slider__item").first().remove();
+		},200);
+	});
+});
+</script>
+
+
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"
+></script>
+</body>
+
+</html>
